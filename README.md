@@ -20,13 +20,13 @@ Include header
 ### MATLAB/Simulink
 
 ```C
-float FromSimulink();           // Try to read data from MATLAB/Simulink
-void  ToSimulink(float value);  // Try to write data to  MATLAB/Simulink
+float FromSimulink();               // Read data from MATLAB/Simulink
+void  ToSimulink(float value);      // Write data to  MATLAB/Simulink
 ```
 
 ### Simulink Desktop RealTime
 
 ```C
-float FromSimulinkRT();           // Try to read data from SimulinkRT
-void  ToSimulinkRT(float value);  // Try to write data to  SimulinkRT
+float FromSimulinkRT();             // Read data from SimulinkRT
+void  ToSimulinkRT(float value);    // Write data to  SimulinkRT
 ```

@@ -32,13 +32,14 @@ float FromSimulink()
 //  Writes float to Simulink Desktop RT (terminator "\r\n")
 void ToSimulinkRT(float number)
 {
-  BSSIA_OUTPUT_BUFFER.value = number;
-  Serial.println(BSSIA_OUTPUT_BUFFER.value);
+  Serial.println(number);
 }
 
 //  Reads float from Simulink Desktop RT (terminator "\r\t")
 float FromSimulinkRT()
 {
+  if (!Serial.available())
+    return 0;
   BSSIA_INPUT_BUFFER.value = Serial.parseFloat(SKIP_ALL);
   return BSSIA_INPUT_BUFFER.value;
 }
